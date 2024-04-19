@@ -1,0 +1,141 @@
+/* Reset */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+
+/* header */
+.header {
+  background-color: #edf2f6;
+  text-align: center;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.toboolist-logo {
+  width: 200px;
+}
+
+/* main */
+.container {
+  width: 80%;
+  background-color: #edf2f6;
+  margin: 40px auto;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Header-main */
+.header-main {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.input-header-main {
+  width: 250px;
+  padding: 5px;
+}
+
+.button-header-main {
+  padding: 7px 10px;
+  background-color: #17aaf5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.white-separator {
+  border: 1px solid white;
+}
+
+/* main-section  */
+.container-main-section {
+  padding: 40px 30px 30px;
+}
+
+.order-list, .unorder-list {
+  list-style-type: none;
+
+}
+
+.order-list li {
+  font-size: 25px;
+  color: #434851;
+  padding-bottom: 15px;
+}
+
+.container-unorder-list {
+  background-color: white;
+  padding: 5px 30px;
+  border-radius: 6px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.unorder-list li .button-unorder-list-state {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid;
+  background-color: white;
+  padding: 2px;
+}
+
+.check {
+  color: #45ccb3;
+  border-color: #45ccb3;
+}
+
+.cross {
+  color: #ff4a45;
+  border-color: #ff4a45;
+}
+
+.list-of-list, .button-like {
+  display: inline-block;
+  font-size: 17px;
+  vertical-align: middle;
+  color: #474952;
+
+}
+
+
+.button-like {
+  padding: 5px 15px;
+  border-radius: 20px;
+  color: white;
+
+}
+
+.button-like-blue {
+  background-color: #09a9ed;
+}
+
+.button-like-viola {
+  background-color: #ab5de6;
+}
+
+.button-like-water-green {
+  background-color: #2ec6ab;
+}
+
+.button-like-orange {
+  background-color: #ff9b00;
+}
+
+.button-like-rosa {
+  background-color: #ec499d;
+}
+
+.button-like-green {
+  background-color: #a2d115;
+}
+
+.strikethrough-text {
+  text-decoration: line-through;
+  text-decoration-color: #474952;
+}
+
+.done {
+  text-decoration: line-through;
+}

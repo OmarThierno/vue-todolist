@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toboolist</title>
+  <!--Connect CSS file-->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Vue JS  -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <img src="img/logo.png" alt="TobooList logo" class="toboolist-logo">
+  </header>
+  <!-- /Header -->
+
+  <!-- Main -->
+  <main id="app" class="container">
+    <!-- Header-main  -->
+    <header class="header-main">
+      <div class="container-header-main">
+        <input type="text" placeholder="es: Fare la spesa..." class="input-header-main" v-model="user">
+        <button @click="addTask" class="button-header-main">Add Task</button>
+      </div>
+    </header>
+    <!-- /Header-main  -->
+
+    <hr class="white-separator">
+
+    <!-- main-section  -->
+    <div class="container-main-section">
+      <ol class="order-list">
+        <li>&#10146;
+          TASK 
+          <!-- PRECEDENTI -->
+          <div class="container-unorder-list">
+            <ul class="unorder-list">
+              <li v-for="curList in list" @click="">
+                <button class="button-unorder-list-state check">&check;</button>
+                <span :class="{'done': curList.isDone}"  class="list-of-list">{{ curList.task }}</span>
+                <!-- <span class="button-like button-like-blue strikethrough-text">Editoria!</span> -->
+              </li>
+            </ul>
+          </div>
+        </li>
+        <!-- <li>&#10146; 
+          OGGI
+          <div class="container-unorder-list">
+            <ul class="unorder-list">
+              <li>
+                <button class="button-unorder-list-state check">&check;</button>
+                <span class="list-of-list strikethrough-text">Recruiting blog post</span>
+                <span class="button-like button-like-blue strikethrough-text">Editoria!</span>
+              </li>
+            </ul>
+          </div>
+          <div class="container-unorder-list">
+            <ul class="unorder-list">
+              <li>
+                <button class="button-unorder-list-state check">&check;</button>
+                <span class="list-of-list strikethrough-text">Mobile app luaunch</span>
+                <span class="button-like button-like-viola strikethrough-text">Q1 Goals</span>
+              </li>
+            </ul>
+          </div>
+          <div class="container-unorder-list">
+            <ul class="unorder-list">
+              <li>
+                <button class="button-unorder-list-state cross">&cross;</button>
+                <span class="list-of-list">Interview John H.</span>
+                <span class="button-like button-like-water-green">Recruiting</span>
+              </li>
+            </ul>
+          </div>
+          <div class="container-unorder-list">
+            <ul class="unorder-list">
+              <li>
+                <button class="button-unorder-list-state check">&check;</button>
+                <span class="list-of-list strikethrough-text">Summit updateto mobile storefronts</span>
+                <span class="button-like button-like-orange strikethrough-text">Mobile</span>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>&#10146; 
+          PROSSIMI GIORNI
+          <div class="container-unorder-list">
+            <ul class="unorder-list">
+              <li>
+                <button class="button-unorder-list-state cross">&cross;</button>
+                <span class="list-of-list">Schedule meeting with Alex</span>
+                <span class="button-like strikethrough-text"></span>
+              </li>
+            </ul>
+          </div>
+          <div class="container-unorder-list">
+            <ul class="unorder-list">
+              <li>
+                <button class="button-unorder-list-state check">&check;</button>
+                <span class="list-of-list strikethrough-text">Homepage refresh</span>
+                <span class="button-like button-like-rosa strikethrough-text">Website</span>
+              </li>
+            </ul>
+          </div>
+          <div class="container-unorder-list">
+            <ul class="unorder-list">
+              <li>
+                <button class="button-unorder-list-state check">&check;</button>
+                <span class="list-of-list strikethrough-text">Onboard new Sales team members</span>
+                <span class="button-like button-like-green strikethrough-text">Sales</span>
+              </li>
+            </ul>
+          </div>
+          <div class="container-unorder-list">
+            <ul class="unorder-list">
+              <li>
+                <button class="button-unorder-list-state check">&check;</button>
+                <span class="list-of-list strikethrough-text">Review editorial calendar</span>
+                <span class="button-like button-like-blue strikethrough-text">Editoria!</span>
+              </li>
+            </ul>
+          </div>
+        </li> -->
+      </ol>
+    </div>
+    <!-- /main-section  -->
+  </main>
+  <!-- /Main -->
+
+  <script src="js/script.js"></script>
+</body>
+</html>
