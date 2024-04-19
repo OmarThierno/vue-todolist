@@ -39,7 +39,7 @@ createApp({
   }, 
   methods: {
     addTask: function() {
-      this.list.push({...newTask})
+      this.list.push({...this.newTask})
     }
   }
 }).mount('#app')
