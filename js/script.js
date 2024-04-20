@@ -43,6 +43,9 @@ createApp({
         this.list.push({...this.newTask});
         this.newTask.task = '';
       }
+    },
+    removeTask: function(indexToRemove) {
+      this.list.splice(indexToRemove, 1);
     }
   }
 }).mount('#app')
