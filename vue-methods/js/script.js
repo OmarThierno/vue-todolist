@@ -40,7 +40,8 @@ createApp({
     if (localList !== null) {
       this.list = JSON.parse(localList)
     } else {
-      this.list = this.list;
+      // this.list = [];
+      this.list = this.list
     }
   }, 
   methods: {
