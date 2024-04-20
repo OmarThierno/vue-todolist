@@ -22,7 +22,7 @@
     <!-- Header-main  -->
     <header class="header-main">
       <div class="container-header-main">
-        <input type="text" placeholder="es: Fare la spesa..." class="input-header-main" v-model="newTask.task">
+        <input @keydown.enter="addTask" type="text" placeholder="es: Fare la spesa..." class="input-header-main" v-model="newTask.task">
         <button @click="addTask" class="button-header-main">Add Task</button>
       </div>
     </header>

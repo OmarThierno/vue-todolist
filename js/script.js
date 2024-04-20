@@ -23,7 +23,7 @@ createApp({
           isDone: false,
         },
         {
-          task: 'Sconfiggere Lori a scacchi',
+          task: 'Battere Lori a scacchi',
           isDone: false,
         },
       ],
@@ -39,7 +39,10 @@ createApp({
   }, 
   methods: {
     addTask: function() {
-      this.list.push({...this.newTask})
+      if (this.newTask.task !== '') {
+        this.list.push({...this.newTask});
+        this.newTask.task = '';
+      }
     }
   }
 }).mount('#app')
