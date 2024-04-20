@@ -38,7 +38,7 @@
           <!-- PRECEDENTI -->
           <div class="container-unorder-list">
             <ul class="unorder-list">
-              <li v-for="curList in list" @click="">
+              <li v-for="curList in list" @click="curList.isDone = !curList.isDone">
                 <button class="button-unorder-list-state check">&check;</button>
                 <span :class="{'done': curList.isDone}"  class="list-of-list">{{ curList.task }}</span>
                 <!-- <span class="button-like button-like-blue strikethrough-text">Editoria!</span> -->
