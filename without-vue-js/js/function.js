@@ -1,20 +1,37 @@
-function createElem(curObject) {
+function createElem(curObject, indexToSplice) {
   const liElem = document.createElement('li');
-  const spanElem = document.createElement('span');
-  spanElem.innerHTML = curObject.task;
-  spanElem.classList.add('list-of-list');
+  const spanTaskElem = document.createElement('span');
+  spanTaskElem.innerHTML = curObject.task;
+  spanTaskElem.classList.add('list-of-list');
+
+  liElem.classList.add('task')
 
   if (curObject.isDone) {
-    spanElem.classList.add('strikethrough-text');
+    spanTaskElem.classList.add('strikethrough-text');
   }
 
-  liElem.addEventListener('click', () => {
-    console.log('click')
-    spanElem.classList.toggle('strikethrough-text')
+  spanTaskElem.addEventListener('click', () => {
+    spanTaskElem.classList.toggle('strikethrough-text')
     curObject.isDone = !curObject.isDone;
-    console.log(list);
   })
+
+  const spanCancelElem = document.createElement('span');
+  spanCancelElem.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
+  spanCancelElem.classList.add('cancel');
+  spanCancelElem.addEventListener('click', () => {
+    console.log('click');
+    liToSplice.forEach((curLi, index) => {
+      const liToSplice = document.querySelectorAll('.task');
+      if (indexToSplice === index) {
+        curLi.remove()
+        console.log(liToSplice);
+
+      }
+    });
+  })
+
   
-  liElem.append(spanElem);
+  liElem.append(spanTaskElem);
+  liElem.append(spanCancelElem);
   listElem.append(liElem);
 }

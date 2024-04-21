@@ -24,11 +24,10 @@ const list = [
 const listElem = document.querySelector('.unorder-list')
 // console.log(listElem);
 
-list.forEach((curTask) => {
+list.forEach((curTask, index) => {
 
-  createElem(curTask);
+  createElem(curTask, index);
 });
-
 
 const inputElem = document.querySelector('input');
 // console.log(inputElem);
@@ -48,6 +47,7 @@ function addTask() {
   const inputValue = inputElem.value;
 
   if (inputValue !== '') {
+
     const newTask = {
       task: '',
       isDone: false
@@ -55,8 +55,8 @@ function addTask() {
 
     newTask.task = inputValue;
     list.push({...newTask});
-    console.log(list);
-    createElem(newTask);
+
+    createElem(newTask, list.length);
     inputElem.value = '';
   }
 
