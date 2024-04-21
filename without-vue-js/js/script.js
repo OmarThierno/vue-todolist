@@ -30,13 +30,19 @@ list.forEach((curTask) => {
 });
 
 
+const inputElem = document.querySelector('input');
+// console.log(inputElem);
+
 const addBtnElem = document.querySelector('button');
 // console.log(addBtnElem);
 
-addBtnElem.addEventListener('click', addTask);
+inputElem.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter' || event.code === 'Space') {
+    addTask()
+  }
+});
 
-const inputElem = document.querySelector('input');
-// console.log(inputElem);
+addBtnElem.addEventListener('click', addTask);
 
 function addTask() {
   const inputValue = inputElem.value;
