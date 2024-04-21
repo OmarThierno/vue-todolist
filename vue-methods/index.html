@@ -40,6 +40,7 @@
           <!-- PRECEDENTI -->
           <div class="container-unorder-list">
             <ul class="unorder-list">
+              <li v-show="list.length === 0">Non ci sono task</li>
               <li v-for="(curList, index) in list" @click="curList.isDone = !curList.isDone">
                 <!-- <button class="button-unorder-list-state check">&check;</button> -->
                 <span :class="{'done': curList.isDone}"  class="list-of-list">{{ curList.task }}</span>
