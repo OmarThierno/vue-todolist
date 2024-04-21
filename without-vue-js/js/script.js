@@ -21,26 +21,37 @@ const list = [
   },
 ];
 
-const newTask = {
-  task: '',
-  isDone: false
-};
-
 const listElem = document.querySelector('.unorder-list')
-console.log(listElem);
+// console.log(listElem);
 
 list.forEach((curTask) => {
 
-  const liElem = document.createElement('li');
-  const spanElem = document.createElement('span');
-  spanElem.innerHTML = curTask.task;
-  spanElem.classList.add('list-of-list')
+  createElem(curTask);
+});
 
-  if (curTask.isDone) {
-    spanElem.classList.add('strikethrough-text');
+
+const addBtnElem = document.querySelector('button');
+// console.log(addBtnElem);
+
+addBtnElem.addEventListener('click', addTask);
+
+const inputElem = document.querySelector('input');
+// console.log(inputElem);
+
+function addTask() {
+  const inputValue = inputElem.value;
+
+  if (inputValue !== '') {
+    const newTask = {
+      task: '',
+      isDone: false
+    };
+
+    newTask.task = inputValue;
+    list.push({...newTask});
+    console.log(list);
+    createElem(newTask);
+    inputElem.value = '';
   }
 
-  liElem.append(spanElem);
-  listElem.append(liElem);
-
-})
+}
